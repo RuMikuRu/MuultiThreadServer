@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.net.Socket;
 
 public class MonoThreadClientHandler implements Runnable {
-    private static Socket clientDialog;
+    public Socket clientDialog;
     public MonoThreadClientHandler(Socket client) {
-        MonoThreadClientHandler.clientDialog=client;
+        this.clientDialog=client;
     }
 
     @Override
